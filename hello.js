@@ -1,3 +1,3 @@
 console.log("Я начала.");
 let messedg="Helloy";
-alert(`top, ${messedg}`);
+console.log(`top, ${messedg}`);

@@ -15,4 +15,4 @@ console.log("Привет, " +MyName+"! Тебе", + age + " лет.");
 let city="Екб";
 let hobby='программирование';
 
-console.log("Я живу в " +city +" и я учу "+ hobby)
+console.log("Я живу в " +city +" и я учу "+ hobby);
