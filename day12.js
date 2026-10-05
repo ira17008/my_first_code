@@ -122,7 +122,17 @@ console.log(filtered);
 console.log(arr13);
 
 console.log("Задание 3: ");
-//не получилось, тяжеловато
+let arrnum3 = [5, 3, 8, 1];
+function filterRangeInPlace (arr, a, b){
+    for (let i = arr.length-1 ; i>=0 ;i-- ){
+        if (arr[i] < a || arr[i] > b){
+            arr.splice (i, 1);
+        }
+    }
+}
+filterRangeInPlace(arrnum3, 1, 4);
+console.log(arrnum3);
+
 
 console.log("Задание 4: ");
 let arr14 = [5, 2, 1, -10, 8];
@@ -151,7 +161,19 @@ let names = userss.map(item => item.name);
 console.log(names);
 
 console.log("Задание 8: ");
-//пропускаю, потом вернусь
+let vasya3 = { name: "Вася", surname: "Пупкин", id: 1 };
+let petya3 = { name: "Петя", surname: "Иванов", id: 2 };
+let masha3 = { name: "Маша", surname: "Петрова", id: 3 };
+let users3 = [ vasya3, petya3, masha3 ];
+let usersMapped = users3.map (person => {
+    return {
+        id : person.id,
+        fullName : `${person.name} ${person.surname}`,
+    }
+});
+console.log( usersMapped[0].id );
+console.log( usersMapped[0].fullName );
+
 
 console.log("Задание 9: ");
 let vasya2 = { name: "Вася", age: 25 };
@@ -165,3 +187,4 @@ sortByAge(arr16);
 console.log(arr16[0].name); 
 console.log(arr16[1].name); 
 console.log(arr16[2].name); 
+
