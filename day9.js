@@ -1,24 +1,24 @@
-// let user = {
-//     name: "John",
-//     age: 30,
-//     "likes birds": true,
-// };
+let user = {
+    name: "John",
+    age: 30,
+    "likes birds": true,
+};
 
-// console.log(user.age);
-// console.log(user.name);
+console.log(user.age);
+console.log(user.name);
 
-// user.isAdmin = true; //добавили свойство
+user.isAdmin = true; //добавили свойство
 
-// console.log(user.isAdmin);
+console.log(user.isAdmin);
 
-// delete user.age;  //удалить свойство
+delete user.age;  //удалить свойство
 
-// console.log(user.age);  //выводит undefined
+console.log(user.age);  //выводит undefined
 
-// for (let key in user){
-//     console.log(key);
-//     console.log(user[key]);
-// }
+for (let key in user){
+    console.log(key);
+    console.log(user[key]);
+}
 
 //===ЗАДАЧИ ПОСЛЕ ГЛАВЫ===
 

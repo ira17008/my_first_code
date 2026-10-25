@@ -101,3 +101,7 @@ console.log(countVowels("привет"));
 console.log(countVowels("молоко"));        
 console.log(countVowels("JavaScript"));   
 console.log(countVowels(""));
+
+
+//стрелочнеы функции НЕ для методов объекта!!
+//в методах ТОЛЬКО обычные функции
