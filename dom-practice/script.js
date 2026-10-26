@@ -32,3 +32,28 @@ text.forEach(elem => console.log(elem.textContent));
 let newP = document.createElement("p");
 newP.textContent = "Я создан через JS";
 document.body.append(newP);
+
+//день 2. обработчики событий
+
+let clickBtn = document.querySelector("#clickBtn");
+clickBtn.addEventListener("click", function(){
+    console.log("Кнопка нажата");
+});
+
+let nameInput = document.querySelector("#nameInput");
+let output = document.querySelector("#output");
+nameInput.addEventListener("input", function(event){
+    output.textContent = "Привет, " + event.target.value;
+});
+
+console.log("Скрипт загружен");
+
+//задачи
+let count = document.querySelector("#count");
+let sum = 0;
+function countClick(){
+    sum +=1 ;
+    count.textContent = sum;
+}
+let counterBtn = document.querySelector("#counterBtn");
+counterBtn.addEventListener("click", countClick);
