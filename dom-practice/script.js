@@ -57,3 +57,57 @@ function countClick(){
 }
 let counterBtn = document.querySelector("#counterBtn");
 counterBtn.addEventListener("click", countClick);
+
+let box = document.querySelector("#box");
+let colorBtn = document.querySelector("#colorBtn");
+function colorBt (){
+    let r = Math.floor(Math.random()*256);
+    let g = Math.floor(Math.random()*256);
+    let b = Math.floor(Math.random()*256);
+    box.style.background = `rgb(${r}, ${g}, ${b})`;
+}
+colorBtn.addEventListener("click", colorBt);
+
+let secret = document.querySelector("#secret");
+let toggleBtn = document.querySelector("#toggleBtn");
+function toggleBt(){
+    secret.hidden = !secret.hidden;
+}
+toggleBtn.addEventListener("click", toggleBt);
+
+
+//день три. Формы
+
+let form = document.querySelector("#myForm");
+let input = document.querySelector("#taskInput");
+let list = document.querySelector("#taskList");
+
+let counter = document.querySelector("#counter");
+let coun = 0;
+
+form.addEventListener("submit", function(events){
+    events.preventDefault();
+    let text = input.value;
+    if (text === "") return;
+
+    let li = document.createElement("li");
+    li.textContent = text;
+
+    let btn = document.createElement("button");
+    btn.textContent = "Удалить";
+
+    coun++;
+    counter.textContent = "Задач : " + coun;
+
+    btn.addEventListener("click", function(){
+        li.remove();
+        coun--;
+        counter.textContent = "Задач : " + coun;
+    });
+
+    li.append(btn);
+
+    list.append(li);
+    input.value = "";
+
+});
